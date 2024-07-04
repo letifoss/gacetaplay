@@ -3,6 +3,21 @@
     padding: 0;
 }
 
+@font-face {
+    font-family: 'Filetto regular';
+    src: url('./fonts/Filetto_regular.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+body{
+    font-size: 20px;
+    overflow-x: hidden;
+    background-color: black !important;
+    font-family: 'Filetto regular', sans-serif !important;
+}
+
 .contenedor{
     display: flex;
     flex-direction: column;
@@ -17,10 +32,7 @@
 .fondo{
     background-color: black;
 }
-body{
-    font-size: 18px;
-    overflow-x: hidden;
-}
+
 
 .menu{
     color: rgb(255, 255, 255);
@@ -33,6 +45,7 @@ body{
 }
 
 ul a{
+    font-size: 1.2em;
     color: rgb(248, 248, 248);
     text-decoration: none;
     padding: 10px;
@@ -49,20 +62,15 @@ ul a:hover{
 .logo{
     display: flex;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 60px;
     margin-bottom: 30px;
 }
 .logo img{
-    border: 2px solid rgb(54, 54, 54);
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    animation: start 1.8s;
-    width:500px;
+    animation: start 2s;
+    width:400px;
 }
 
-    @keyframes start {
+    /* @keyframes start {
     from{
         opacity: 0;
         transform: rotate(180deg);
@@ -71,6 +79,18 @@ ul a:hover{
         opacity: 1;
     }
     }
+    */
+
+     @keyframes start {
+    0%{
+        transform:scale(0.4);
+    }
+
+    100% {
+        transform:scale(1);
+    }
+    }
+    
 
 .text{
     animation-name: texto;
@@ -91,6 +111,9 @@ ul a:hover{
     margin-top: 100px;
     width: 50%;
     height: 300px;
+}
+.presentacion h1{
+    font-size: 28px;
 }
  /* view-timeline-name: --pres;
     view-timeline-axis: block;
@@ -125,6 +148,21 @@ ul a:hover{
 
 
 
+.p-card-eventos{
+    width: 350px;
+    height: 366.875px;
+    background-color: rgb(0,0,0, 0.8);
+    cursor: pointer;
+    color: white;
+}
+
+.p-card-eventos:hover{
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 10px rgb(100, 100, 100);
+}
+.bi{
+    font-size: 22px;
+}
 .carrousel{
     width: 500px;
     height: 600px;
@@ -152,6 +190,7 @@ ul a:hover{
 }
 
 .foto2{
+
     view-timeline-name: --images;
     view-timeline-axis: block;
 
@@ -172,8 +211,13 @@ ul a:hover{
     animation-fill-mode: both; 
 }
 
+
 .image-shadow{
-    box-shadow: 0 0 15px rgb(56, 56, 56);
+    box-shadow: 0 0 10px rgb(27, 27, 27);
+}
+
+form{
+    width: 600px;
 }
 
 .submit{
@@ -181,14 +225,20 @@ ul a:hover{
     border: 1px solid rgb(36, 36, 36);
     background-color: rgb(182, 182, 182);
     font-weight: bold;
+    transition: background-color 1s ease;
 }
 .submit:hover{
     box-shadow: 0 0 10px white;
     background-color: rgb(19, 19, 19);
     color: white;
-    transition-duration: 0.8s;
+    transition-duration: 0.7s;
+    
 }
+.proyecto:not(:hover) {
+    background-color: white;
+  }
 
+  
 .footer{
     width: 100%;
     height: 200px;
@@ -196,7 +246,7 @@ ul a:hover{
     margin-top: 200px;
 }
 .footer a{
-    font-size: 0.8em;
+    font-size: 0.9em;
     text-decoration: none;
     color: white;
 }
@@ -206,29 +256,19 @@ ul a:hover{
 }
 
 
-.footericon{
-    filter: brightness(100);
-
-
-}
-
 .footericon:hover{
-    transform: scale(1.2);
-    transition-duration: 0.4s;
-    transition-timing-function: ease-in-out;
+    filter: drop-shadow(0 0 5px rgb(117, 117, 117));
 }
 
 @media screen and (max-width: 678px) {
-    .menu {
-        height: 80px;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-content: center;
-    }
 
     .logo img {
         width: 250px;
         margin-top: 100px;
+    }
+
+    form{
+        width: 350px;
     }
 }
 
@@ -240,10 +280,7 @@ ul a:hover{
         text-align: center;
         padding: 10px;
 }
-    .foto1, .foto2, .foto3{
-        width: 250px;
-        margin: 10px;
-    }
+
     .presentacion h3{
         font-size: 20px;
     }
@@ -254,9 +291,12 @@ ul a:hover{
     }
     }
 
-
 @media screen and (max-width: 425px) {
     .carrousel{
         margin-bottom: 180px;
+    }
+
+    form{
+        width: 270px;
     }
 }
