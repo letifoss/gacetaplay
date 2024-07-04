@@ -151,13 +151,13 @@ ul a:hover{
 .p-card-eventos{
     width: 350px;
     height: 366.875px;
-    background-color: rgb(0,0,0, 0.8);
+    background-color: rgb(0,0,0, 0.7);
     cursor: pointer;
     color: white;
 }
 
 .p-card-eventos:hover{
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.5);
     box-shadow: 0 0 10px rgb(100, 100, 100);
 }
 .bi{
@@ -213,7 +213,7 @@ ul a:hover{
 
 
 .image-shadow{
-    box-shadow: 0 0 10px rgb(27, 27, 27);
+    box-shadow: 0 0 2px rgb(17, 17, 17);
 }
 
 form{
